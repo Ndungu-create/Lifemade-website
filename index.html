@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lifemade - Pure & Refreshing</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Lifemade</h1>
+            <p>Quench Thirst</p>
+            <nav>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#products">Our Products</a></li>
+                    <li><a href="#why">Why Choose Us</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h2>Pure & Refreshing Mineral Water</h2>
+            <p>Experience the purity of nature in every sip.</p>
+            <a href="#products" class="btn">Explore Products</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Lifemade is committed to making mineral water a common commodity in Kenya. Our purification process ensures clean, refreshing, and safe drinking water for everyone.</p>
+        </div>
+    </section>
+
+    <section id="products">
+        <div class="container">
+            <h2>Our Products</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="bottle1.jpg" alt="500ml Bottle">
+                    <h3>500ml Bottle</h3>
+                    <p>Perfect for on-the-go hydration.</p>
+                </div>
+                <div class="product-card">
+                    <img src="bottle2.jpg" alt="1L Bottle">
+                    <h3>1L Bottle</h3>
+                    <p>Ideal for daily use.</p>
+                </div>
+                <div class="product-card">
+                    <img src="bottle3.jpg" alt="5L Bottle">
+                    <h3>5L Bottle</h3>
+                    <p>Great for families and gatherings.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why">
+        <div class="container">
+            <h2>Why Choose Us?</h2>
+            <div class="why-grid">
+                <div class="why-card">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Purity Guaranteed</h3>
+                    <p>Our water undergoes rigorous purification to ensure it’s safe and clean.</p>
+                </div>
+                <div class="why-card">
+                    <i class="fas fa-dollar-sign"></i>
+                    <h3>Affordable Prices</h3>
+                    <p>High-quality water at prices everyone can afford.</p>
+                </div>
+                <div class="why-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Eco-Friendly Packaging</h3>
+                    <p>We care about the environment and use sustainable materials.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p>"Lifemade water is the best! It’s pure, refreshing, and affordable."</p>
+                    <h4>- Jane Doe</h4>
+                </div>
+                <div class="testimonial-card">
+                    <p>"I love the eco-friendly packaging. Great job, Lifemade!"</p>
+                    <h4>- John Smith</h4>
+                </div>
+                <div class="testimonial-card">
+                    <p>"The 5L bottle is perfect for my family. Highly recommended!"</p>
+                    <h4>- Mary Johnson</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Have questions or want to place an order? Reach out to us!</p>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> info@lifemade.co.ke</p>
+                <p><i class="fas fa-phone"></i> +254 700 123 456</p>
+            </div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.808559219345!2d36.82115931475391!3d-1.286385835979308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d1b3b5b5b5%3A0x1b3b5b5b5b5b5b5b!2sNairobi%2C%20Kenya!5e0!3m2!1sen!2ske!4v1633021234567!5m2!1sen!2ske" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Lifemade. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#hero" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- JavaScript -->
+    <script>
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Scroll Animations
+        const sections = document.querySelectorAll('section');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        // Back to Top Button
+        const backToTopButton = document.querySelector('.back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+
+        // Fade Header on Scroll
+        const header = document.querySelector('header');
+        let lastScrollY = window.scrollY;
+
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+
+            if (currentScrollY > lastScrollY) {
+                // Scrolling down
+                header.style.opacity = '0';
+                header.style.pointerEvents = 'none'; // Disable clicks when hidden
+            } else {
+                // Scrolling up
+                header.style.opacity = '1';
+                header.style.pointerEvents = 'auto'; // Enable clicks when visible
+            }
+
+            lastScrollY = currentScrollY;
+        });
+    </script>
+</body>
+</html>
